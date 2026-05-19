@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --navy: #0a1628;
+  --navy-mid: #0f2040;
+  --navy-light: #1a3260;
+  --teal: #00c9b1;
+  --teal-dim: #00897a;
+  --cream: #f8f4ee;
+  --cream-dim: #e8e2d8;
+  --text: #f0ece4;
+  --text-dim: #8a9bb5;
+  --card-bg: rgba(255,255,255,0.04);
+  --card-border: rgba(255,255,255,0.08);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--navy);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  min-height: 100vh;
+  background-image: 
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(0,201,177,0.12) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 30% at 90% 80%, rgba(0,100,200,0.08) 0%, transparent 50%);
+}
+
+.serif { font-family: 'DM Serif Display', serif; }
