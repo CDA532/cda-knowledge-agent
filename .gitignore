@@ -1,0 +1,26 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+.Python
+
+# Environment variables - NEVER commit these
+.env
+.env.local
+.env.local.save
+.env.*.local
+
+# Logs
+*.log
+server.log
+
+# Next.js
+frontend/.next/
+frontend/out/
+
+# Node
+node_modules/
+
+# macOS
+.DS_Store
