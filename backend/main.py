@@ -10,7 +10,17 @@ from dotenv import load_dotenv
 load_dotenv()
 
 app = FastAPI()
-app.add_middleware(CORSMiddleware, allow_origins=["https://cda-knowledge-agent1.vercel.app"], allow_credentials=True, allow_methods=["*"], allow_headers=["*"])
+
+origins = os.getenv("FRONTEND_URL", "https://cda-knowledge-agent1.vercel.app").split(",")
+origins.append("https://cda-knowledge-agent1.vercel.app")
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=False,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 class SearchRequest(BaseModel):
     query: str
