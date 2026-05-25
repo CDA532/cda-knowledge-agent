@@ -30,6 +30,7 @@ export default function Home() {
     },
     onError: () => setError("Google sign-in failed. Please try again."),
     scope: "email profile https://www.googleapis.com/auth/drive.readonly",
+    prompt: "none",
   });
 
   const handleSearch = async () => {
