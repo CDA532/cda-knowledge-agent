@@ -36,7 +36,7 @@ def health():
     return {"status": "ok"}
 
 @app.post("/search", response_model=SearchResponse)
-async def search(req: SearchRequest):
+def search(req: SearchRequest):
     user = verify_google_token(req.token)
     if not user:
         raise HTTPException(status_code=401, detail="Invalid token")
